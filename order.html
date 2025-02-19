@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smak & Tradition</title>
+    <!-- Google Fonts: Roboto & Meriiweather -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700|Merriweather:700">
+    <!-- Registering my styles -->
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Smak & Tradition</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="order.html" class="active">Order</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Order Content -->
+    <section class="order">
+        <div class="container">
+            <h1>Place Your Order</h1>
+            <p>Select your favorite dish and provide your details to have it delivered or for pickup.</p>
+
+            <form action="" id="order-form">
+                <label for="dish">Select Dish:</label>
+                <select name="dish" id="dish" required>
+                    <option value="">--Choose a Dish--</option>
+                    <option value="bruschetta">Bruschetta</option>
+                </select>
+
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+
+                <label for="instructions">Special Instructions:</label>
+                <textarea name="instructions" id="instructions" rows="4"></textarea>
+
+                <label for="customerName">Your Name:</label>
+                <input type="text" id="customerName" name="customerName" required>
+
+                <label for="customerPhone">Phone Number:</label>
+                <input type="tel" id="customerPhone" name="customerPhone" required>
+
+                <label for="customerAddress">Address:</label>
+                <input type="text" id="customerAddress" name="customerAddress" required>
+
+                <button type="submit" class="btn">Order</button>
+
+            </form> 
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Smak & Tradition. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
