@@ -233,3 +233,17 @@ footer {
 .btn:hover {
     background-color: #006400;
 } 
+
+/* Success Message */
+.success-message {
+    max-width: 600px;
+    margin: 100px auto;
+    text-align: center;
+    padding: 4rem;
+    background: #fff;
+    border: 2px solid #8b0000;
+    border-radius: 10px;
+}
+.success-message p {
+    margin-bottom: 2rem;
+}
