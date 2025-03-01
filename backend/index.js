@@ -25,6 +25,19 @@ db.serialize(() => {
             createdAt DATETIME DEFAULT CURRENT_TIMESTAMP
        ) 
     `);
+
+    db.run(`
+        CREATE TABLE IF NOT EXISTS orders (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            customerName TEXT,
+            customerAddress TEXT,
+            customerPhone TEXT,
+            instructions TEXT,
+            dish TEXT,
+            quantity INTEGER,
+            createdAt DATETIME DEFAULT CURRENT_TIMESTAMP
+        ) 
+    `);
 });
 
 
@@ -56,6 +69,19 @@ app.post('/contact', (req, res) => {
             return res.status(500).send('Error submitting contact request. Please try again.');
         }
         res.redirect('/contact-success.html');
+    })
+
+});
+
+// Order Form Submission
+app.post('/order', (req, res) => {
+    const {customerName, customerPhone, customerAddress, instructions, quantity, dish} = req.body;
+    const query = `INSERT INTO orders (customerName, customerPhone, customerAddress, instructions, quantity, dish) VALUES (?, ?, ?, ?, ?, ?)`;
+    db.run(query, [customerName, customerPhone, customerAddress, instructions, quantity, dish], function(err){
+        if(err) {
+            return res.status(500).send('Error submitting order request. Please try again.');
+        }
+        res.redirect('/order-success.html');
     })
 
 });
