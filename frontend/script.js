@@ -25,3 +25,13 @@ document.addEventListener("DOMContentLoaded", ()=> {
     
 
 });
+
+function showLoading(event) {
+    event.preventDefault();
+
+    document.getElementById("loadingOverlay").style.display = "flex";
+
+    setTimeout(() => {
+        event.target.submit();
+    }, 2000);
+}

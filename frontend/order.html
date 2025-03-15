@@ -31,7 +31,7 @@
             <h1>Place Your Order</h1>
             <p>Select your favorite dish and provide your details to have it delivered or for pickup.</p>
 
-            <form action="/order" method="post" id="order-form" novalidate>
+            <form action="/order" method="post" id="order-form" novalidate onsubmit="showLoading(event)">
                 <label for="dish">Select Dish:</label>
                 <select name="dish" id="dish" required>
                     <option value="">--Choose a Dish--</option>
@@ -60,6 +60,13 @@
                 <button type="submit" class="btn">Order</button>
 
             </form> 
+
+            <!-- Loading Spinner -->
+             <div id="loadingOverlay">
+                <div class="spinner">
+                    <p>Placing your order...</p>
+                </div>
+             </div>
         </div>
     </section>
     
