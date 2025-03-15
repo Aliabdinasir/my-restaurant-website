@@ -117,6 +117,59 @@ body {
     background-color: #006400;
 }
 
+/* Restaurant Timings */
+.opening-hours {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #f8f8f8;
+}
+
+.opening-hours h2 {
+    font: 2rem;
+    margin: 1rem;
+}
+
+.opening-hours table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.opening-hours th, .opening-hours td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+}
+
+.opening-hours th {
+    background-color: #8b0000;
+    color: white;
+}
+
+/* Location Map Section */
+.location {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #fff;
+}
+
+.location h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+}
+
 /* Footer */
 footer {
     background-color: #8b0000;
