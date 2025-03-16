@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smak & Tradition</title>
-    <!-- Google Fonts: Roboto & Meriiweather -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700|Merriweather:700">
     <!-- Registering my styles -->
     <link rel="stylesheet" href="main.css">
 </head>
@@ -14,7 +12,7 @@
     <header>
         <nav class="navbar">
             <div class="logo">Smak & Tradition</div>
-            <div class="mobile-menu" id="mobileMenu">&#9776</div>
+            <div class="mobile-menu" id="mobileMenu">&#9776;</div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
@@ -31,12 +29,12 @@
         <div class="container">
             <h1>Contact Us</h1>
             <p>If you have any questions or would like to book a table, please reach out to us using the form below or via our contact details.</p>
-            <form action="http://localhost:3000/contact" method="post" id="contact-form" novalidate>
+            <form action="http://localhost:3000/contact" method="post" id="contact-form">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
                 <label for="email">Email:</label>
-                <input type="text" id="email" name="email" required>
+                <input type="email" id="email" name="email" required>
 
                 <label for="message">Massage:</label>
                 <input type="text" id="message" name="message" required>
